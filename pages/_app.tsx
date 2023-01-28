@@ -3,6 +3,7 @@ import { Inter as FontSans } from "@next/font/google"
 import { ThemeProvider } from "next-themes"
 
 import "@/styles/globals.css"
+import Head from "next/head"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -12,6 +13,14 @@ const fontSans = FontSans({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Stamatis Theodosiadis' personal website."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <style jsx global>{`
 				:root {
 					--font-sans: ${fontSans.style.fontFamily};

@@ -12,7 +12,7 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "Next.js",
+  name: "stamtheod",
   description:
     "Beautifully designed components built with Radix UI and Tailwind CSS.",
   mainNav: [
@@ -20,6 +20,10 @@ export const siteConfig: SiteConfig = {
       title: "Home",
       href: "/",
     },
+    {
+      title: "About",
+      href: "/about",
+    }
   ],
   links: {
     twitter: "https://twitter.com/shadcn",
