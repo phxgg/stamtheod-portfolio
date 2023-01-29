@@ -31,8 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			}`}</style>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <Component {...pageProps} />
-
-        {/* <WavyBottom /> */}
+        <WavyBottom />
       </ThemeProvider>
     </>
   )

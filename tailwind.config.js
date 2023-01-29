@@ -34,12 +34,18 @@ module.exports = {
           "60%": { transform: "rotate(10.0deg)" },
           "70%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
-        }
+        },
+        "fading": {
+          "0%": { opacity: 0.5 },
+          "50%": { opacity: 1 },
+          "100%": { opacity: 0.5 },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "wave": "wave 2s ease-in-out infinite",
+        "fading": "fading 10s ease-in-out infinite",
       },
     },
   },
