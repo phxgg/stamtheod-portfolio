@@ -23,7 +23,7 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
-        <Icons.logo className="h-6 w-6" />
+        <Icons.logo className="h-6 w-6 hover:animate-wave" />
         <span className="hidden font-bold sm:inline-block">
           {siteConfig.name}
         </span>
@@ -38,7 +38,8 @@ export function MainNav({ items }: MainNavProps) {
                   href={item.href}
                   className={cn(
                     "flex items-center text-lg font-semibold text-slate-600 hover:text-slate-900 dark:text-slate-100 sm:text-sm",
-                    item.disabled && "cursor-not-allowed opacity-80"
+                    item.disabled && "cursor-not-allowed opacity-80",
+                    "duration-200 hover:-rotate-6"
                   )}
                 >
                   {item.title}
