@@ -29,5 +29,10 @@ export const languages: Languages = {
     title: "Java",
     iconClass: "devicon-java-plain",
     color: "#007396",
+  },
+  csharp: {
+    title: "C#",
+    iconClass: "devicon-csharp-plain",
+    color: "#239120",
   }
-};
+}

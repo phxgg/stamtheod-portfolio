@@ -1,16 +1,17 @@
 import Head from "next/head";
-import { ExternalLinkIcon, GithubIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-import { Layout } from "@/components/layout";
-import { Separator } from "@/components/ui/separator";
+import { siteConfig } from "@/config/site";
+import { projects } from "@/config/projects";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { siteConfig } from "@/config/site";
-import { projects } from "@/config/projects";
+import { Layout } from "@/components/layout";
+import { Separator } from "@/components/ui/separator";
 import { buttonVariants } from "@/components/ui/button";
+import { Icons } from "@/components/icons";
 
 export default function ProjectsPage() {
   return (
@@ -18,21 +19,26 @@ export default function ProjectsPage() {
       <Head>
         <title>{`Projects / ${siteConfig.name}`}</title>
       </Head>
-      <section className="container grid items-center gap-6 pt-6 pb-8 md:py-10">
+      <section className="animate__animated animate__headShake container grid items-center gap-6 pt-6 pb-8 md:py-10">
         <div className="flex max-w-[980px] flex-col items-start gap-4">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Projects
+            <span className="text-pink-700 dark:text-pink-400">.</span>
           </h1>
           <p className="max-w-[700px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             This is a list of projects I have worked on.
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="flex flex-col items-start gap-4 rounded-lg border border-slate-200 p-4 dark:border-slate-700"
+              className={cn(
+                "flex flex-col items-start gap-4 rounded-lg border border-slate-200 p-4 dark:border-slate-700",
+                "hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg dark:hover:border-slate-600",
+                "transition-all duration-200 ease-in-out"
+              )}
             >
               <h2 className="flex items-center text-xl font-bold text-slate-800 dark:text-slate-200">
                 <Tooltip>
@@ -47,26 +53,49 @@ export default function ProjectsPage() {
                   {project.title}
                 </span>
               </h2>
-              <p className="min-h-[100px] text-lg text-slate-700 dark:text-slate-400">
+              <p className="min-h-[70px] text-slate-700 dark:text-slate-400">
                 {project.description}
               </p>
               <Separator />
               <div className="flex flex-row gap-2 text-sm">
-                <a href={project.links.github} className={buttonVariants({ variant: "outline", size: "sm" })}>
-                  <span className="flex items-center gap-1 text-slate-700 dark:text-slate-300">
-                    <GithubIcon size={16} />
-                    GitHub
-                  </span>
-                </a>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={buttonVariants({ variant: "outline", size: "sm" })}
+                    >
+                      <span className="flex items-center gap-1 text-slate-700 dark:text-slate-300">
+                        {/* <GithubIcon size={16} /> */}
+                        <Icons.gitHub className="h-4 w-4" />
+                      </span>
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    View on GitHub
+                  </TooltipContent>
+                </Tooltip>
                 {project.links?.demo && (
                   <>
                     <Separator orientation="vertical" />
-                    <a href={project.links.demo} className={buttonVariants({ variant: "outline", size: "sm" })}>
-                      <span className="flex items-center gap-1 text-slate-700 dark:text-slate-300">
-                        <ExternalLinkIcon size={16} />
-                        Demo
-                      </span>
-                    </a>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <a
+                          href={project.links.demo}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={buttonVariants({ variant: "outline", size: "sm" })}
+                        >
+                          <span className="flex items-center gap-1 text-slate-700 dark:text-slate-300">
+                            <Icons.eye className="h-4 w-4" />
+                          </span>
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        View demo
+                      </TooltipContent>
+                    </Tooltip>
                   </>
                 )}
               </div>
@@ -75,5 +104,5 @@ export default function ProjectsPage() {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

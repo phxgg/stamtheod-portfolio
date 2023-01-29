@@ -1,9 +1,9 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import { Layout } from "@/components/layout";
 import { siteConfig } from "@/config/site";
 import { buttonVariants } from "@/components/ui/button";
-import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -11,10 +11,11 @@ export default function AboutPage() {
       <Head>
         <title>{`About / ${siteConfig.name}`}</title>
       </Head>
-      <section className="container grid items-center gap-6 pt-6 pb-8 md:py-10">
+      <section className="animate__animated animate__pulse container grid items-center gap-6 pt-6 pb-8 md:py-10">
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             About me
+            <span className="text-pink-700 dark:text-pink-400">.</span>
           </h1>
           <p className="max-w-[700px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             Accessible and customizable components that you can copy and paste

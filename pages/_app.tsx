@@ -1,9 +1,12 @@
 import type { AppProps } from "next/app"
+import Head from "next/head"
 import { Inter as FontSans } from "@next/font/google"
 import { ThemeProvider } from "next-themes"
 
 import "@/styles/globals.css"
-import Head from "next/head"
+import "animate.css"
+
+import { WavyBottom } from "@/components/ui/wavy-bottom"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -20,7 +23,6 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
       </Head>
       <style jsx global>{`
 				:root {
@@ -29,6 +31,8 @@ export default function App({ Component, pageProps }: AppProps) {
 			}`}</style>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <Component {...pageProps} />
+
+        {/* <WavyBottom /> */}
       </ThemeProvider>
     </>
   )
