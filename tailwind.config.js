@@ -36,9 +36,9 @@ module.exports = {
           "100%": { transform: "rotate(0.0deg)" },
         },
         "fading": {
-          "0%": { opacity: 0.5 },
-          "50%": { opacity: 1 },
-          "100%": { opacity: 0.5 },
+          "0%": { left: "0", opacity: 0.5 },
+          "50%": { left: "-50%", opacity: 1 },
+          "100%": { left: "0", opacity: 0.5 },
         },
       },
       animation: {
