@@ -23,7 +23,7 @@ export default function ProjectsPage() {
         <div className="flex max-w-[980px] flex-col items-start gap-4">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Projects
-            <span className="text-pink-700 dark:text-pink-400">.</span>
+            <span className="text-pink-700 dark:text-pink-500">.</span>
           </h1>
           <p className="max-w-[700px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             This is a list of projects I have worked on.
@@ -49,9 +49,15 @@ export default function ProjectsPage() {
                     {project.language.title}
                   </TooltipContent>
                 </Tooltip>
-                <span className="font-mono">
+                <a
+                  href={project.links.github}
+                  className="group font-mono transition duration-300"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {project.title}
-                </span>
+                  <span className="block h-0.5 max-w-0 bg-pink-700 transition-all duration-500 group-hover:max-w-full dark:bg-pink-500"></span>
+                </a>
               </h2>
               <p className="min-h-[70px] text-slate-700 dark:text-slate-400">
                 {project.description}
