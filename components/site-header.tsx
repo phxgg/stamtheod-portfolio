@@ -21,6 +21,7 @@ export function SiteHeader() {
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
+              className="hover:animate-wave"
             >
               <div
                 className={buttonVariants({
@@ -37,6 +38,7 @@ export function SiteHeader() {
               href={siteConfig.links.twitter}
               target="_blank"
               rel="noreferrer"
+              className="hover:animate-wave"
             >
               <div
                 className={buttonVariants({

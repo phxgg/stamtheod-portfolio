@@ -19,7 +19,7 @@ export default function ProjectsPage() {
       <Head>
         <title>{`Projects / ${siteConfig.name}`}</title>
       </Head>
-      <section className="animate__animated animate__headShake container grid items-center gap-6 pt-6 pb-8 md:py-10">
+      <section className="animate__animated animate__swing container grid items-center gap-6 pt-6 pb-8 md:py-10">
         <div className="flex max-w-[980px] flex-col items-start gap-4">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Projects
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
               key={project.title}
               className={cn(
                 "flex flex-col items-start gap-4 rounded-lg border border-slate-200 p-4 dark:border-slate-700",
-                "hover:-translate-y-1 hover:border-slate-300 hover:shadow-lg dark:hover:border-slate-600",
+                "hover:-translate-y-1 hover:-rotate-1 hover:border-slate-300 hover:shadow-lg dark:hover:border-slate-600",
                 "transition-all duration-200 ease-in-out"
               )}
             >
