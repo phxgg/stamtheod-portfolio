@@ -19,14 +19,14 @@ export default function ProjectsPage() {
       <Head>
         <title>{`Projects / ${siteConfig.name}`}</title>
       </Head>
-      <section className="animate__animated animate__swing container grid items-center gap-6 pt-6 pb-8 md:py-10">
+      <section className="animate__animated animate__fadeIn container grid items-center gap-6 pt-6 pb-8 md:py-10">
         <div className="flex max-w-[980px] flex-col items-start gap-4">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Projects
             <span className="text-pink-700 dark:text-pink-500">.</span>
           </h1>
-          <p className="max-w-[700px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
-            This is a list of projects I have worked on.
+          <p className="max-w-[700px] text-lg text-slate-700 dark:text-slate-400">
+            This is a list of projects that I have worked on.
           </p>
         </div>
 

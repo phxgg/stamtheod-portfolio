@@ -5,6 +5,11 @@ interface SiteConfig {
   fullName: string
   description: string
   mainNav: NavItem[]
+  info: {
+    email: string
+    phone: string
+    twitterHandle: string
+  }
   links: {
     twitter: string
     github: string
@@ -14,7 +19,7 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "stamtheod",
+  name: "Stamatis Theodosiadis", // stamtheod
   fullName: "Stamatis Theodosiadis",
   description: "Full Stack Developer, Software Engineer, Open Source Contributor",
   mainNav: [
@@ -25,8 +30,17 @@ export const siteConfig: SiteConfig = {
     {
       title: "Projects",
       href: "/projects",
-    }
+    },
+    {
+      title: "Contact",
+      href: "/contact"
+    },
   ],
+  info: {
+    email: "test@test.com",
+    phone: "+30 698 123 4567",
+    twitterHandle: "@stamtheod",
+  },
   links: {
     twitter: "https://twitter.com/stamtheod",
     github: "https://github.com/phxgg",
