@@ -63,9 +63,7 @@ export default function IndexPage() {
             />
           </div>
         </div>
-
         <Separator />
-
         <Contributions items={contributions} />
       </section>
     </Layout>

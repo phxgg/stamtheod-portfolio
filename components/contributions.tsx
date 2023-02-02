@@ -1,4 +1,5 @@
 import { Contribution } from "@/types/contribution"
+import { ExternalLinkIcon } from "lucide-react"
 import Image from "next/image"
 import { ScrollArea } from "./ui/scroll-area"
 
@@ -57,7 +58,10 @@ export function Contributions({ items }: ContributionsProps) {
                     rel="noreferrer"
                     className="text-slate-800 transition-all duration-200 ease-in-out hover:text-opacity-80 dark:text-slate-200 dark:hover:text-opacity-80"
                   >
-                    {item.projectTitle}
+                    <span className="flex items-center">
+                      {item.projectTitle}
+                      <ExternalLinkIcon className="ml-1 inline-block h-4 w-4" />
+                    </span>
                   </a>
                 </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400">

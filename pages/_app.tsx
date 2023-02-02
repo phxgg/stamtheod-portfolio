@@ -7,6 +7,7 @@ import "@/styles/globals.css"
 import "animate.css"
 
 import { WavyBottom } from "@/components/ui/wavy-bottom"
+import { Separator } from "@/components/ui/separator"
 
 const fontSans = FontSans({
   subsets: ["latin"],

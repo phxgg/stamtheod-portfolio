@@ -14,6 +14,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { NavigationMenuDemo } from "./main-nav-menu"
 
 interface MainNavProps {
   items?: NavItem[]
@@ -23,12 +24,16 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
-        <Icons.logo className="h-6 w-6 hover:animate-wave" />
+        <Icons.logo className="h-6 w-6 rounded-full hover:animate-wave" />
         <span className="hidden font-bold sm:inline-block">
           {siteConfig.name}
         </span>
       </Link>
       {items?.length ? (
+        // <div className="hidden gap-6 md:flex">
+        //   <NavigationMenuDemo items={items} />
+        // </div>
+
         <nav className="hidden gap-6 md:flex">
           {items?.map(
             (item, index) =>
@@ -54,7 +59,7 @@ export function MainNav({ items }: MainNavProps) {
             variant="ghost"
             className="-ml-4 text-base hover:bg-transparent focus:ring-0 md:hidden"
           >
-            <Icons.logo className="mr-2 h-4 w-4" />{" "}
+            <Icons.logo className="mr-2 h-5 w-5 rounded-full" />{" "}
             <span className="font-bold">Menu</span>
           </Button>
         </DropdownMenuTrigger>
@@ -65,7 +70,7 @@ export function MainNav({ items }: MainNavProps) {
         >
           <DropdownMenuLabel>
             <Link href="/" className="flex items-center">
-              <Icons.logo className="mr-2 h-4 w-4" /> {siteConfig.name}
+              <Icons.logo className="mr-2 h-5 w-5 rounded-full" /> {siteConfig.name}
             </Link>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
