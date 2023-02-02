@@ -17,7 +17,7 @@ export const Icons = {
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <circle cx="12" cy="12" r="100" fill="#aeaeae" />
-      <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="15px" font-family="Arial" dy=".4em">ST</text>
+      <text x="50%" y="50%" textAnchor="middle" fill="white" fontSize="15px" fontFamily="Arial" dy=".4em">ST</text>
     </svg>
 
     // <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
@@ -44,4 +44,17 @@ export const Icons = {
       <circle cx="12" cy="12" r="3"></circle>
     </svg>
   ),
+  externalLink: (props: LucideProps) => (
+    <svg viewBox="0 0 24 24" {...props}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </svg>
+  )
 }

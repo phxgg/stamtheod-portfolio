@@ -1,6 +1,7 @@
 import { Contribution } from "@/types/contribution"
 import { ExternalLinkIcon } from "lucide-react"
 import Image from "next/image"
+import { Icons } from "./icons"
 import { ScrollArea } from "./ui/scroll-area"
 
 interface ContributionsProps {
@@ -60,7 +61,7 @@ export function Contributions({ items }: ContributionsProps) {
                   >
                     <span className="flex items-center">
                       {item.projectTitle}
-                      <ExternalLinkIcon className="ml-1 inline-block h-4 w-4" />
+                      <Icons.externalLink className="ml-1 inline-block h-4 w-4" />
                     </span>
                   </a>
                 </h3>
