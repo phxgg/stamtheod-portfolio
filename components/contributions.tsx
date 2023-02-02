@@ -1,13 +1,12 @@
 import { Contribution } from "@/types/contribution"
-import { ScrollAreaScrollbar } from "@radix-ui/react-scroll-area"
 import Image from "next/image"
-import { ScrollArea, ScrollBar } from "./ui/scroll-area"
+import { ScrollArea } from "./ui/scroll-area"
 
 interface ContributionsProps {
   items?: Contribution[]
 }
 
-export function Contributions({ items }) {
+export function Contributions({ items }: ContributionsProps) {
   return (
     <div className="flex flex-col gap-6 overflow-hidden">
       <h2 className="text-2xl font-bold text-slate-800 transition-all duration-200 ease-in-out hover:-translate-y-1 dark:text-slate-200 sm:text-3xl">
