@@ -12,6 +12,7 @@ export function Contributions({ items }) {
     <div className="flex flex-col gap-6 overflow-hidden">
       <h2 className="text-2xl font-bold text-slate-800 transition-all duration-200 ease-in-out hover:-translate-y-1 dark:text-slate-200 sm:text-3xl">
         Contributions
+        <span className="text-pink-700 dark:text-pink-500">.</span>
       </h2>
       <ScrollArea className="w-full">
         <div className="flex space-x-4 pb-4">
