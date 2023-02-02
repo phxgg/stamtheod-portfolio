@@ -16,8 +16,7 @@ interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "stamtheod",
   fullName: "Stamatis Theodosiadis",
-  description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+  description: "Full Stack Developer, Software Engineer, Open Source Contributor",
   mainNav: [
     {
       title: "Home",

@@ -3,7 +3,10 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 import { siteConfig } from "@/config/site"
+import { contributions } from "@/config/contributions"
 import { Layout } from "@/components/layout"
+import { Separator } from "@/components/ui/separator"
+import { Contributions } from "@/components/contributions"
 
 export default function IndexPage() {
   return (
@@ -60,6 +63,10 @@ export default function IndexPage() {
             />
           </div>
         </div>
+
+        <Separator />
+
+        <Contributions items={contributions} />
       </section>
     </Layout>
   )
