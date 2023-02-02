@@ -13,8 +13,6 @@ export default function IndexPage() {
       </Head>
       <section className="animate__animated animate__jackInTheBox container grid items-center gap-6 pt-6 pb-8 md:py-10">
         <div className="flex w-full max-w-[980px] flex-row justify-between gap-2">
-
-
           <div className="flex flex-col gap-6">
             <div className="flex items-center">
               <span aria-label="Waving hand" className="float-left animate-wave text-2xl sm:text-3xl">👋</span>&nbsp;
