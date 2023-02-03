@@ -24,7 +24,12 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
-        <Icons.logo className="h-6 w-6 rounded-full hover:animate-wave" />
+        <Icons.logo
+          className={cn(
+            "h-6 w-6 rounded-full transition will-change-[filter] duration-300 ease-in-out hover:animate-wave",
+            "hover:drop-shadow-[0_0_2em_#db2777] dark:hover:drop-shadow-[0_0_2em_#646cffaa]"
+          )}
+        />
         <span className="hidden font-bold sm:inline-block">
           {siteConfig.name}
         </span>
