@@ -36,7 +36,7 @@ export default function ProjectsPage() {
               key={project.title}
               className={cn(
                 "flex flex-col items-start gap-4 rounded-lg border border-slate-200 p-4 dark:border-slate-700",
-                "hover:-translate-y-1 hover:-rotate-1 hover:border-slate-300 hover:shadow-lg dark:hover:border-slate-600",
+                "hover:scale-105 hover:border-slate-300 hover:shadow-lg dark:hover:border-slate-600",
                 "transition-all duration-200 ease-in-out"
               )}
             >

@@ -8,12 +8,16 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
 import { siteConfig } from "@/config/site"
+import { Icons } from "./icons"
+import { Separator } from "./ui/separator"
 
 export function TwitterHoverCard() {
   return (
     <HoverCard>
       <HoverCardTrigger asChild>
-        <Button variant="link">@stamtheod</Button>
+        <Button variant="link">
+          {siteConfig.info.twitterHandle}
+        </Button>
       </HoverCardTrigger>
       <HoverCardContent className="w-80">
         <div className="flex justify-between space-x-4">
