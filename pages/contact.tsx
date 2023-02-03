@@ -127,7 +127,8 @@ export default function ContactPage() {
           <div className="animate__animated animate__backInRight flex flex-col gap-4">
             <div className="flex flex-col gap-4 rounded-lg p-10 shadow-lg dark:bg-gray-900">
               <h2 className="text-xl font-bold">
-                Say hello!
+                Say hello
+                <span className="text-pink-700 dark:text-pink-500">!</span>
               </h2>
               <form
                 className={cn(
