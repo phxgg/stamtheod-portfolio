@@ -15,7 +15,7 @@ export default function IndexPage() {
       <Head>
         <title>{`Home / ${siteConfig.name}`}</title>
       </Head>
-      <section className="container grid items-center gap-6 pt-6 pb-8 md:py-10">
+      <section className="container grid items-center gap-6 pt-6 pb-8 md:py-10 overflow-hidden">
         <div className="animate__animated animate__backInLeft flex w-full max-w-[980px] flex-row justify-between gap-2">
           <div className="flex flex-col gap-6">
             <div className="flex items-center">

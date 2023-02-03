@@ -3,11 +3,11 @@ import Head from "next/head"
 import { Inter as FontSans } from "@next/font/google"
 import { ThemeProvider } from "next-themes"
 
+import { WavyBottom } from "@/components/ui/wavy-bottom"
+import { Toaster } from "react-hot-toast"
+
 import "@/styles/globals.css"
 import "animate.css"
-
-import { WavyBottom } from "@/components/ui/wavy-bottom"
-import { Separator } from "@/components/ui/separator"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,6 +33,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <Component {...pageProps} />
         <WavyBottom />
+
+        <Toaster />
       </ThemeProvider>
     </>
   )
