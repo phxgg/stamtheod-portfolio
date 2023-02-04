@@ -124,10 +124,15 @@ export default function ContactPage() {
             </div>
           </div>
 
+          <div>
+            <Separator orientation="vertical" />
+          </div>
+
           <div className="animate__animated animate__backInRight flex flex-col gap-4">
             <div className="flex flex-col gap-4 rounded-lg p-10 shadow-lg dark:bg-gray-900">
-              <h2 className="text-xl font-bold">
-                Say hello
+              <h2 className="flex items-center text-xl font-bold">
+                <span aria-label="Waving hand" className="animate-wave text-2xl sm:text-3xl">👋</span>
+                {" "}Say hello
                 <span className="text-pink-700 dark:text-pink-500">!</span>
               </h2>
               <form
@@ -156,11 +161,14 @@ export default function ContactPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
+                  <p className="text-xs text-slate-500">
+                    Your email will not be shared with anybody.
+                  </p>
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="message" className="text-slate-700 dark:text-slate-400">Message</label>
                   <Textarea
-                    className="text-base"
+                    className="h-28 text-base"
                     placeholder="Hello!"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}

@@ -52,7 +52,6 @@ export default function IndexPage() {
             )}>
               I{"'"}m a software engineer based in
               {" "}<span className="text-sky-500 dark:text-sky-300">Greece</span>.
-              {/*  */}
               <br />
               I specialize in building (and occasionally designing) websites, applications, and everything in between.
             </p>
