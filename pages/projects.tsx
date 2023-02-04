@@ -19,7 +19,7 @@ export default function ProjectsPage() {
       <Head>
         <title>{`Projects / ${siteConfig.name}`}</title>
       </Head>
-      <section className="animate__animated animate__fadeIn container grid items-center gap-6 pt-6 pb-8 md:py-10">
+      <section className="animate__animated animate__fadeIn container grid items-center gap-6 overflow-hidden pt-6 pb-8 md:py-10">
         <div className="flex max-w-[980px] flex-col items-start gap-4">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Projects
