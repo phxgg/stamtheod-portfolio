@@ -54,6 +54,14 @@ export const projects: Project[] = [
     },
   },
   {
+    title: 'lolpy',
+    language: languages['python'],
+    description: "Python wrapper for the League of Legends Client API.",
+    links: {
+      github: "https://github.com/phxgg/lolpy",
+    },
+  },
+  {
     title: "LobbySpy",
     language: languages['csharp'],
     description: "lol-ally-viewer but with a GUI and an OP.GG viewer.",
