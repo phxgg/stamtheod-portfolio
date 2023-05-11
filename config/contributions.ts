@@ -2,6 +2,12 @@ import { Contribution } from "@/types/contribution";
 
 export const contributions: Contribution[] = [
   {
+    projectTitle: "Universis Instant Messaging",
+    description: "A module that implements an instant messaging system inside Universis.",
+    link: "https://gitlab.com/universis/im",
+    image: "",
+  },
+  {
     projectTitle: "Discord Connect",
     description: "A Universis module that allows users to connect their Discord account to their Universis profile.",
     link: "https://gitlab.com/universis/discord-connect/-/merge_requests/2",

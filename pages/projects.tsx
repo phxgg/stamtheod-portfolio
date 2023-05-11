@@ -12,6 +12,7 @@ import { Layout } from "@/components/layout";
 import { Separator } from "@/components/ui/separator";
 import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
+import { Wrench } from "lucide-react";
 
 export default function ProjectsPage() {
   return (
@@ -64,6 +65,26 @@ export default function ProjectsPage() {
               </p>
               <Separator />
               <div className="flex flex-row gap-2 text-sm">
+                {project.underDevelopment === true && (
+                  <>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <button
+                          className={buttonVariants({ variant: "outline", size: "sm" })}
+                        >
+                          <span className="flex items-center gap-1 text-slate-700 dark:text-slate-300">
+                            <Wrench className="h-4 w-4" />
+                          </span>
+                        </button>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Under development
+                      </TooltipContent>
+                    </Tooltip>
+                    <Separator orientation="vertical" />
+                  </>
+                )}
+
                 <Tooltip>
                   <TooltipTrigger>
                     <a

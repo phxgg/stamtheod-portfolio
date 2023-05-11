@@ -5,6 +5,7 @@ interface Project {
   title: string
   language: Language
   description: string
+  underDevelopment?: boolean
   links: {
     github: string
     demo?: string
@@ -12,6 +13,23 @@ interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    title: "jSurebets",
+    language: languages['java'],
+    description: "A Java application that allows you to find surebets in famous Greek bookmakers. Under development.",
+    underDevelopment: true,
+    links: {
+      github: "https://github.com/phxgg/jSurebets",
+    },
+  },
+  {
+    title: "discord-music-bot",
+    language: languages['javascript'],
+    description: "Discord music bot made using discord.js and discord-player.",
+    links: {
+      github: "https://github.com/phxgg/discord-music-bot",
+    },
+  },
   {
     title: "jyeet-bot",
     language: languages['java'],
