@@ -43,7 +43,7 @@ export const siteConfig: SiteConfig = {
     twitterHandle: '@stamtheod',
   },
   links: {
-    twitter: 'https://twitter.com/stamtheod',
+    twitter: 'https://x.com/stamtheod',
     github: 'https://github.com/phxgg',
     avatar: 'https://avatars.githubusercontent.com/u/45177754?v=4',
     docs: 'https://ui.shadcn.com',

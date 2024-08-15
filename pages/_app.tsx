@@ -9,6 +9,8 @@ import { WavyBottom } from '@/components/ui/wavy-bottom';
 import '@/styles/globals.css';
 import 'animate.css';
 
+import { TooltipProvider } from '@/components/ui/tooltip';
+
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
@@ -31,10 +33,12 @@ export default function App({ Component, pageProps }: AppProps) {
 				}
 			}`}</style>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <Component {...pageProps} />
-        <WavyBottom />
+        <TooltipProvider>
+          <Component {...pageProps} />
+          <WavyBottom />
 
-        <Toaster />
+          <Toaster />
+        </TooltipProvider>
       </ThemeProvider>
     </>
   );
