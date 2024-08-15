@@ -1,18 +1,18 @@
-import type { AppProps } from "next/app"
-import Head from "next/head"
-import { Inter as FontSans } from "@next/font/google"
-import { ThemeProvider } from "next-themes"
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import { Inter as FontSans } from '@next/font/google';
+import { ThemeProvider } from 'next-themes';
+import { Toaster } from 'react-hot-toast';
 
-import { WavyBottom } from "@/components/ui/wavy-bottom"
-import { Toaster } from "react-hot-toast"
+import { WavyBottom } from '@/components/ui/wavy-bottom';
 
-import "@/styles/globals.css"
-import "animate.css"
+import '@/styles/globals.css';
+import 'animate.css';
 
 const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -37,5 +37,5 @@ export default function App({ Component, pageProps }: AppProps) {
         <Toaster />
       </ThemeProvider>
     </>
-  )
+  );
 }

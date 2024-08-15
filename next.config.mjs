@@ -4,17 +4,14 @@ const nextConfig = {
   experimental: {
     fontLoaders: [
       {
-        loader: "@next/font/google",
-        options: { subsets: ["latin"] },
+        loader: '@next/font/google',
+        options: { subsets: ['latin'] },
       },
     ],
   },
   images: {
-    domains: [
-      "avatars.githubusercontent.com",
-      "images.unsplash.com"
-    ],
+    domains: ['avatars.githubusercontent.com', 'images.unsplash.com'],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

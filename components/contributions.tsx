@@ -1,11 +1,12 @@
-import { Contribution } from "@/types/contribution"
-import { ExternalLinkIcon } from "lucide-react"
-import Image from "next/image"
-import { Icons } from "./icons"
-import { ScrollArea } from "./ui/scroll-area"
+import Image from 'next/image';
+import { ExternalLinkIcon } from 'lucide-react';
+
+import { Contribution } from '@/types/contribution';
+import { Icons } from './icons';
+import { ScrollArea } from './ui/scroll-area';
 
 interface ContributionsProps {
-  items?: Contribution[]
+  items?: Contribution[];
 }
 
 export function Contributions({ items }: ContributionsProps) {
@@ -21,23 +22,19 @@ export function Contributions({ items }: ContributionsProps) {
             <div key={index} className="w-[150px] space-y-3">
               <div className="relative w-full pb-[100%]">
                 <div className="absolute inset-0 overflow-hidden rounded-md shadow-md">
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href={item.link} target="_blank" rel="noreferrer">
                     {item.image ? (
                       <Image
                         src={item.image}
-                        className="absolute inset-0 h-full w-full object-cover text-transparent transition-all hover:scale-105"
+                        className="absolute inset-0 size-full object-cover text-transparent transition-all hover:scale-105"
                         width={100}
                         height={100}
                         alt="Test image"
                       />
                     ) : (
-                      <div className="absolute inset-0 h-full w-full rounded-md bg-slate-200 dark:bg-slate-800">
+                      <div className="absolute inset-0 size-full rounded-md bg-slate-200 dark:bg-slate-800">
                         <svg
-                          className="absolute inset-0 h-full w-full object-cover text-slate-400 transition-all hover:scale-105 dark:text-slate-600"
+                          className="absolute inset-0 size-full object-cover text-slate-400 transition-all hover:scale-105 dark:text-slate-600"
                           fill="currentColor"
                           viewBox="0 0 32 32"
                           aria-hidden="true"
@@ -61,7 +58,7 @@ export function Contributions({ items }: ContributionsProps) {
                   >
                     <span className="flex items-center">
                       {item.projectTitle}
-                      <Icons.externalLink className="ml-1 inline-block h-4 w-4" />
+                      <Icons.externalLink className="ml-1 inline-block size-4" />
                     </span>
                   </a>
                 </h3>
@@ -74,5 +71,5 @@ export function Contributions({ items }: ContributionsProps) {
         </div>
       </ScrollArea>
     </div>
-  )
+  );
 }

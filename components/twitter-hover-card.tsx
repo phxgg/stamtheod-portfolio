@@ -1,23 +1,21 @@
-import { CalendarDays } from "lucide-react"
+import { CalendarDays } from 'lucide-react';
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
+import { siteConfig } from '@/config/site';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card"
-import { siteConfig } from "@/config/site"
-import { Icons } from "./icons"
-import { Separator } from "./ui/separator"
+} from '@/components/ui/hover-card';
+import { Icons } from './icons';
+import { Separator } from './ui/separator';
 
 export function TwitterHoverCard() {
   return (
     <HoverCard>
       <HoverCardTrigger asChild>
-        <Button variant="link">
-          {siteConfig.info.twitterHandle}
-        </Button>
+        <Button variant="link">{siteConfig.info.twitterHandle}</Button>
       </HoverCardTrigger>
       <HoverCardContent className="w-80">
         <div className="flex justify-between space-x-4">
@@ -33,11 +31,9 @@ export function TwitterHoverCard() {
                 {siteConfig.info.twitterHandle}
               </h4>
             </a>
-            <p className="text-sm">
-              Full Stack Developer, Software Engineer
-            </p>
+            <p className="text-sm">Full Stack Developer, Software Engineer</p>
             <div className="flex items-center pt-2">
-              <CalendarDays className="mr-2 h-4 w-4 opacity-70" />{" "}
+              <CalendarDays className="mr-2 size-4 opacity-70" />{' '}
               <span className="text-xs text-slate-500 dark:text-slate-400">
                 Joined May 2020
               </span>
@@ -46,5 +42,5 @@ export function TwitterHoverCard() {
         </div>
       </HoverCardContent>
     </HoverCard>
-  )
+  );
 }

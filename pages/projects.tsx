@@ -1,18 +1,18 @@
-import Head from "next/head";
-import { cn } from "@/lib/utils";
+import Head from 'next/head';
+import { Wrench } from 'lucide-react';
 
-import { siteConfig } from "@/config/site";
-import { projects } from "@/config/projects";
+import { projects } from '@/config/projects';
+import { siteConfig } from '@/config/site';
+import { cn } from '@/lib/utils';
+import { Icons } from '@/components/icons';
+import { Layout } from '@/components/layout';
+import { buttonVariants } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Layout } from "@/components/layout";
-import { Separator } from "@/components/ui/separator";
-import { buttonVariants } from "@/components/ui/button";
-import { Icons } from "@/components/icons";
-import { Wrench } from "lucide-react";
+} from '@/components/ui/tooltip';
 
 export default function ProjectsPage() {
   return (
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       <Head>
         <title>{`Projects / ${siteConfig.name}`}</title>
       </Head>
-      <section className="animate__animated animate__fadeIn container grid items-center gap-6 overflow-hidden pt-6 pb-8 md:py-10">
+      <section className="animate__animated animate__fadeIn container grid items-center gap-6 overflow-hidden pb-8 pt-6 md:py-10">
         <div className="flex max-w-[980px] flex-col items-start gap-4">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Projects
@@ -36,19 +36,21 @@ export default function ProjectsPage() {
             <div
               key={project.title}
               className={cn(
-                "flex flex-col items-start gap-4 rounded-lg border border-slate-200 p-4 dark:border-slate-700",
-                "hover:scale-105 hover:border-slate-300 hover:shadow-lg dark:hover:border-slate-600",
-                "transition-all duration-200 ease-in-out"
+                'flex flex-col items-start gap-4 rounded-lg border border-slate-200 p-4 dark:border-slate-700',
+                'hover:scale-105 hover:border-slate-300 hover:shadow-lg dark:hover:border-slate-600',
+                'transition-all duration-200 ease-in-out'
               )}
             >
               <h2 className="flex items-center text-xl font-bold text-slate-800 dark:text-slate-200">
                 <Tooltip>
                   <TooltipTrigger>
-                    <span className={project.language.iconClass} style={{ color: project.language.color }}></span>&nbsp;
+                    <span
+                      className={project.language.iconClass}
+                      style={{ color: project.language.color }}
+                    ></span>
+                    &nbsp;
                   </TooltipTrigger>
-                  <TooltipContent>
-                    {project.language.title}
-                  </TooltipContent>
+                  <TooltipContent>{project.language.title}</TooltipContent>
                 </Tooltip>
                 <a
                   href={project.links.github}
@@ -70,16 +72,17 @@ export default function ProjectsPage() {
                     <Tooltip>
                       <TooltipTrigger>
                         <button
-                          className={buttonVariants({ variant: "outline", size: "sm" })}
+                          className={buttonVariants({
+                            variant: 'outline',
+                            size: 'sm',
+                          })}
                         >
                           <span className="flex items-center gap-1 text-slate-700 dark:text-slate-300">
-                            <Wrench className="h-4 w-4" />
+                            <Wrench className="size-4" />
                           </span>
                         </button>
                       </TooltipTrigger>
-                      <TooltipContent>
-                        Under development
-                      </TooltipContent>
+                      <TooltipContent>Under development</TooltipContent>
                     </Tooltip>
                     <Separator orientation="vertical" />
                   </>
@@ -91,17 +94,18 @@ export default function ProjectsPage() {
                       href={project.links.github}
                       target="_blank"
                       rel="noreferrer"
-                      className={buttonVariants({ variant: "outline", size: "sm" })}
+                      className={buttonVariants({
+                        variant: 'outline',
+                        size: 'sm',
+                      })}
                     >
                       <span className="flex items-center gap-1 text-slate-700 dark:text-slate-300">
                         {/* <GithubIcon size={16} /> */}
-                        <Icons.gitHub className="h-4 w-4" />
+                        <Icons.gitHub className="size-4" />
                       </span>
                     </a>
                   </TooltipTrigger>
-                  <TooltipContent>
-                    View on GitHub
-                  </TooltipContent>
+                  <TooltipContent>View on GitHub</TooltipContent>
                 </Tooltip>
                 {project.links?.demo && (
                   <>
@@ -112,16 +116,17 @@ export default function ProjectsPage() {
                           href={project.links.demo}
                           target="_blank"
                           rel="noreferrer"
-                          className={buttonVariants({ variant: "outline", size: "sm" })}
+                          className={buttonVariants({
+                            variant: 'outline',
+                            size: 'sm',
+                          })}
                         >
                           <span className="flex items-center gap-1 text-slate-700 dark:text-slate-300">
-                            <Icons.eye className="h-4 w-4" />
+                            <Icons.eye className="size-4" />
                           </span>
                         </a>
                       </TooltipTrigger>
-                      <TooltipContent>
-                        View demo
-                      </TooltipContent>
+                      <TooltipContent>View demo</TooltipContent>
                     </Tooltip>
                   </>
                 )}
@@ -131,5 +136,5 @@ export default function ProjectsPage() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }
