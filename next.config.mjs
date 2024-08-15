@@ -1,16 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    fontLoaders: [
+  images: {
+    remotePatterns: [
       {
-        loader: '@next/font/google',
-        options: { subsets: ['latin'] },
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       },
     ],
-  },
-  images: {
-    domains: ['avatars.githubusercontent.com', 'images.unsplash.com'],
   },
 };
 

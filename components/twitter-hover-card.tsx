@@ -8,8 +8,6 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from '@/components/ui/hover-card';
-import { Icons } from './icons';
-import { Separator } from './ui/separator';
 
 export function TwitterHoverCard() {
   return (

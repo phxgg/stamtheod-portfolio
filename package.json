@@ -14,7 +14,6 @@
     "ncu:update": "npx npm-check-updates -u -x @types/node,eslint"
   },
   "dependencies": {
-    "@next/font": "^14.2.5",
     "@radix-ui/react-accessible-icon": "^1.1.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-alert-dialog": "^1.1.1",

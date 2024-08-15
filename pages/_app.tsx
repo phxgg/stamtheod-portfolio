@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
+import { Inter as FontSans } from 'next/font/google';
 import Head from 'next/head';
-import { Inter as FontSans } from '@next/font/google';
 import { ThemeProvider } from 'next-themes';
 import { Toaster } from 'react-hot-toast';
 
