@@ -1,5 +1,8 @@
-/** @type {import('prettier').Config} */
-module.exports = {
+/**
+ * @see https://prettier.io/docs/en/configuration.html
+ * @type {import('prettier').Config}
+ */
+const config = {
   endOfLine: 'lf',
   semi: true,
   singleQuote: true,
@@ -21,3 +24,5 @@ module.exports = {
   importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
   plugins: ['@ianvs/prettier-plugin-sort-imports'],
 };
+
+export default config;
