@@ -63,7 +63,7 @@ export function MainNav({ items }: MainNavProps) {
                     'group'
                   )}
                 >
-                  <span className="bg-gradient-to-r from-pink-600 to-purple-400 bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
+                  <span className="bg-linear-to-r from-pink-600 to-purple-400 bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                     {item.title}
                   </span>
                 </Link>

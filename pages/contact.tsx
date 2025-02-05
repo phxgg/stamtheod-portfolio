@@ -97,7 +97,7 @@ export default function ContactPage() {
             </div>
 
             <div className="flex flex-row justify-between">
-              <div className="animate__animated animate__jackInTheBox flex flex-col gap-4 rounded-lg p-10 shadow dark:bg-gray-900">
+              <div className="animate__animated animate__jackInTheBox flex flex-col gap-4 rounded-lg p-10 shadow-sm dark:bg-gray-900">
                 <div className="flex flex-col gap-2">
                   <h2 className="text-lg font-bold text-slate-700 dark:text-slate-300">
                     Email

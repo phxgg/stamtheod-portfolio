@@ -1,4 +1,4 @@
-/* eslint-disable tailwindcss/classnames-order */
+// /* eslint-disable tailwindcss/classnames-order */
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -45,7 +45,7 @@ export default function IndexPage() {
                 'transition-all duration-200 ease-in-out'
               )}
             >
-              <span className="animate-text bg-gradient-to-r from-pink-600 via-indigo-800 to-purple-400 bg-clip-text font-extrabold text-transparent">
+              <span className="animate-text bg-linear-to-r from-pink-600 via-indigo-800 to-purple-400 bg-clip-text font-extrabold text-transparent">
                 {siteConfig.fullName}
               </span>
               <span className="text-pink-700 dark:text-pink-500">.</span>
