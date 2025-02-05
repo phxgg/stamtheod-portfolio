@@ -1,6 +1,6 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-import tailwindcss from 'eslint-plugin-tailwindcss';
+// import tailwindcss from 'eslint-plugin-tailwindcss';
 
 const __dirname = import.meta.dirname;
 const compat = new FlatCompat({
@@ -22,23 +22,23 @@ const configs = [
   ...compat.extends(
     'next/core-web-vitals',
     'prettier',
-    'plugin:tailwindcss/recommended'
+    // 'plugin:tailwindcss/recommended'
   ),
   {
-    plugins: {
-      tailwindcss,
-    },
+    // plugins: {
+    //   tailwindcss,
+    // },
 
-    settings: {
-      tailwindcss: {
-        callees: ['cn'],
-      },
-    },
+    // settings: {
+    //   tailwindcss: {
+    //     callees: ['cn'],
+    //   },
+    // },
 
     rules: {
       '@next/next/no-html-link-for-pages': 'off',
       'react/jsx-key': 'off',
-      'tailwindcss/no-custom-classname': 'off',
+      // 'tailwindcss/no-custom-classname': 'off',
     },
   },
 ];
