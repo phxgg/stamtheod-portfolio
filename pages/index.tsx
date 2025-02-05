@@ -1,4 +1,4 @@
-/* eslint-disable tailwindcss/classnames-order */
+// /* eslint-disable tailwindcss/classnames-order */
 import Head from 'next/head';
 import Image from 'next/image';
 
