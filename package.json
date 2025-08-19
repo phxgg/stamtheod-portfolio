@@ -11,8 +11,8 @@
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
     "preview": "next build && next start",
-    "ncu:check": "npx npm-check-updates",
-    "ncu:update": "npx npm-check-updates -u"
+    "ncu:check": "npx npm-check-updates -x @types/node",
+    "ncu:update": "npx npm-check-updates -u -x @types/node"
   },
   "dependencies": {
     "@radix-ui/react-accessible-icon": "^1.1.7",
